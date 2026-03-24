@@ -1,11 +1,7 @@
+import Home from './pages/Home'
+
 function App() {
-  return (
-    <div className="flex items-center justify-center h-screen bg-blue-500">
-      <h1 className="text-4xl font-bold text-white">
-        Setup concluído 🚀
-      </h1>
-    </div>
-  )
+  return <Home />
 }
 
 export default App

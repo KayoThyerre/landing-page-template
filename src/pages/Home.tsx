@@ -1,5 +1,6 @@
 import AboutSection from '../components/AboutSection'
 import CarouselSection from '../components/CarouselSection'
+import ContactSection from '../components/ContactSection'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import NewsSection from '../components/NewsSection'
@@ -14,6 +15,7 @@ function Home() {
       <AboutSection />
       <StatsSection />
       <NewsSection />
+      <ContactSection />
     </>
   )
 }

@@ -51,11 +51,14 @@ function NewsSection() {
   return (
     <section className="bg-white py-16">
       <div>
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+        <h2 className="animate-fade-up text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Notícias
         </h2>
 
-        <article className="group relative mt-8 h-[320px] overflow-hidden rounded-xl">
+        <article
+          className="group relative mt-8 h-[320px] overflow-hidden rounded-xl animate-fade-up"
+          style={{ animationDelay: '120ms' }}
+        >
           <img
             src={featuredNews.image}
             alt={featuredNews.title}
@@ -82,7 +85,8 @@ function NewsSection() {
           {otherNews.map((item) => (
             <article
               key={item.id}
-              className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-slate-50 p-5 sm:flex-row"
+              className="animate-fade-up flex flex-col gap-4 rounded-xl border border-slate-200 bg-slate-50 p-5 sm:flex-row"
+              style={{ animationDelay: `${item.id * 120}ms` }}
             >
               <img
                 src={item.image}

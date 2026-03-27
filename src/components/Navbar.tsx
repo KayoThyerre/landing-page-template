@@ -39,7 +39,7 @@ function Navbar() {
 
           <button
             type="button"
-            className="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+            className="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:brightness-110"
           >
             Entrar
           </button>

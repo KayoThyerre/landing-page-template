@@ -39,7 +39,7 @@ function StatsSection() {
     <section className="bg-slate-50 py-16">
       <MainLayout>
         <div>
-          <h2 className="text-center text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="animate-fade-up text-center text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
             Transparência em números
           </h2>
 
@@ -47,7 +47,8 @@ function StatsSection() {
             {stats.map((stat) => (
               <article
                 key={stat.id}
-                className="rounded-xl bg-white p-6 text-center shadow-md"
+                className="animate-fade-up rounded-xl bg-white p-6 text-center shadow-md"
+                style={{ animationDelay: `${stat.id * 120}ms` }}
               >
                 <div className="text-4xl">{stat.icon}</div>
                 <div className="mt-4 text-3xl font-bold text-slate-900">

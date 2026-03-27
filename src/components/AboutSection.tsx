@@ -5,7 +5,7 @@ function AboutSection() {
     <section className="bg-white py-16">
       <MainLayout>
         <div className="grid items-center gap-10 md:grid-cols-2">
-          <div>
+          <div className="animate-fade-up">
             <img
               src="/sobre-nos.jpg"
               alt="Guarda Civil Municipal em atuação"
@@ -13,7 +13,7 @@ function AboutSection() {
             />
           </div>
 
-          <div>
+          <div className="animate-fade-up" style={{ animationDelay: '120ms' }}>
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
               Quem Somos
             </h2>

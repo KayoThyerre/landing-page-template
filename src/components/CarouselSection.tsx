@@ -55,7 +55,7 @@ function CarouselSection() {
     <section className="bg-slate-950 py-16 text-white">
       <MainLayout>
         <div>
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="animate-fade-up text-3xl font-semibold tracking-tight sm:text-4xl">
             Ocorrências e Notícias
           </h2>
 
@@ -64,7 +64,8 @@ function CarouselSection() {
               {items.map((item) => (
                 <article
                   key={item.id}
-                  className="group relative h-[220px] w-[300px] shrink-0 overflow-hidden rounded-xl"
+                  className="group relative h-[220px] w-[300px] shrink-0 overflow-hidden rounded-xl animate-fade-up"
+                  style={{ animationDelay: `${item.id * 120}ms` }}
                 >
                   <img
                     src={item.image}

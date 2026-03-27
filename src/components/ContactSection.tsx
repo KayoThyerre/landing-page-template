@@ -1,3 +1,4 @@
+import { AtSign, Globe, Phone } from 'lucide-react'
 import MainLayout from '../layouts/MainLayout'
 
 function ContactSection() {
@@ -9,24 +10,52 @@ function ContactSection() {
             Contato
           </h2>
 
-          <div className="mt-10 grid gap-6 text-center lg:grid-cols-3">
-            <article className="rounded-xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-xl font-semibold">GCM</h3>
-              <p className="mt-3 text-slate-300">Ligue 153</p>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            <article className="rounded-xl border border-white/10 bg-white/5 p-6 text-left">
+              <h3 className="text-lg font-semibold">GCM</h3>
+              <div className="mt-4 space-y-3 text-gray-300">
+                <div className="flex items-center gap-2">
+                  <Phone size={18} />
+                  <span>Ligue 153</span>
+                </div>
+              </div>
             </article>
 
-            <article className="rounded-xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-xl font-semibold">Prefeitura</h3>
-              <p className="mt-3 text-slate-300">Ligue (99) 1212-3434</p>
+            <article className="rounded-xl border border-white/10 bg-white/5 p-6 text-left">
+              <h3 className="text-lg font-semibold">Prefeitura</h3>
+              <div className="mt-4 space-y-3 text-gray-300">
+                <div className="flex items-center gap-2">
+                  <Phone size={18} />
+                  <span>Ligue (99) 1212-3434</span>
+                </div>
+              </div>
             </article>
 
-            <article className="rounded-xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-xl font-semibold">Nossas redes</h3>
-              <ul className="mt-3 space-y-2 text-slate-300">
-                <li>Instagram GCM</li>
-                <li>Instagram Prefeitura</li>
-                <li>Site Prefeitura</li>
-              </ul>
+            <article className="rounded-xl border border-white/10 bg-white/5 p-6 text-left">
+              <h3 className="text-lg font-semibold">Nossas redes</h3>
+              <div className="mt-4 space-y-3 text-gray-300">
+                <a
+                  href="#"
+                  className="flex items-center gap-2 transition hover:text-white"
+                >
+                  <AtSign size={18} />
+                  <span>Instagram GCM</span>
+                </a>
+                <a
+                  href="#"
+                  className="flex items-center gap-2 transition hover:text-white"
+                >
+                  <AtSign size={18} />
+                  <span>Instagram Prefeitura</span>
+                </a>
+                <a
+                  href="#"
+                  className="flex items-center gap-2 transition hover:text-white"
+                >
+                  <Globe size={18} />
+                  <span>Site Prefeitura</span>
+                </a>
+              </div>
             </article>
           </div>
         </div>

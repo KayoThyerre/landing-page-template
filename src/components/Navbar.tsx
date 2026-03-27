@@ -25,7 +25,7 @@ function Navbar() {
                     to={item.to}
                     className={({ isActive }) =>
                       [
-                        'transition hover:text-white/80',
+                        'border-b border-transparent pb-1 transition-all duration-300 hover:border-white/60 hover:text-white',
                         isActive ? 'font-semibold text-white' : 'text-gray-300',
                       ].join(' ')
                     }

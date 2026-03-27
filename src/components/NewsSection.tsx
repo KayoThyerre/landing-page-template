@@ -1,5 +1,3 @@
-import MainLayout from '../layouts/MainLayout'
-
 type NewsItem = {
   id: number
   title: string
@@ -52,61 +50,59 @@ const [featuredNews, ...otherNews] = newsItems
 function NewsSection() {
   return (
     <section className="bg-white py-16">
-      <MainLayout>
-        <div>
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Notícias
-          </h2>
+      <div>
+        <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          Notícias
+        </h2>
 
-          <article className="group relative mt-8 h-[320px] overflow-hidden rounded-xl">
-            <img
-              src={featuredNews.image}
-              alt={featuredNews.title}
-              className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-90"
-            />
-            <div className="absolute inset-0 bg-black/50" />
+        <article className="group relative mt-8 h-[320px] overflow-hidden rounded-xl">
+          <img
+            src={featuredNews.image}
+            alt={featuredNews.title}
+            className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-90"
+          />
+          <div className="absolute inset-0 bg-black/50" />
 
-            <div className="relative flex h-full items-end p-6">
-              <div className="max-w-3xl text-white">
-                <p className="text-sm font-medium text-slate-200">
-                  {featuredNews.date}
-                </p>
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                  {featuredNews.title}
+          <div className="relative flex h-full items-end p-6">
+            <div className="max-w-3xl text-white">
+              <p className="text-sm font-medium text-slate-200">
+                {featuredNews.date}
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+                {featuredNews.title}
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-slate-100 sm:text-base">
+                {featuredNews.description}
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <div className="mt-10 space-y-6">
+          {otherNews.map((item) => (
+            <article
+              key={item.id}
+              className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-slate-50 p-5 sm:flex-row"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-28 w-full rounded-lg object-cover sm:w-40"
+              />
+
+              <div className="flex-1">
+                <p className="text-sm font-medium text-slate-500">{item.date}</p>
+                <h3 className="mt-2 text-xl font-semibold text-slate-900">
+                  {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-slate-100 sm:text-base">
-                  {featuredNews.description}
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  {item.description}
                 </p>
               </div>
-            </div>
-          </article>
-
-          <div className="mt-10 space-y-6">
-            {otherNews.map((item) => (
-              <article
-                key={item.id}
-                className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-slate-50 p-5 sm:flex-row"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-28 w-full rounded-lg object-cover sm:w-40"
-                />
-
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-slate-500">{item.date}</p>
-                  <h3 className="mt-2 text-xl font-semibold text-slate-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    {item.description}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
-      </MainLayout>
+      </div>
     </section>
   )
 }

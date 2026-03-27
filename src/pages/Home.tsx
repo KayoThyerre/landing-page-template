@@ -3,7 +3,6 @@ import CarouselSection from '../components/CarouselSection'
 import ContactSection from '../components/ContactSection'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
-import NewsSection from '../components/NewsSection'
 import StatsSection from '../components/StatsSection'
 
 function Home() {
@@ -14,7 +13,6 @@ function Home() {
       <CarouselSection />
       <AboutSection />
       <StatsSection />
-      <NewsSection />
       <ContactSection />
     </>
   )

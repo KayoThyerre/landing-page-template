@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const menuItems = [
   { label: 'Home', to: '/' },
@@ -21,9 +21,17 @@ function Navbar() {
             <ul className="flex items-center gap-3 text-xs font-medium text-white sm:gap-6 sm:text-sm">
               {menuItems.map((item) => (
                 <li key={item.to}>
-                  <Link to={item.to} className="transition hover:text-white/80">
+                  <NavLink
+                    to={item.to}
+                    className={({ isActive }) =>
+                      [
+                        'transition hover:text-white/80',
+                        isActive ? 'font-semibold text-white' : 'text-gray-300',
+                      ].join(' ')
+                    }
+                  >
                     {item.label}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>

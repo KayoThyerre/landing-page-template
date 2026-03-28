@@ -1,73 +1,115 @@
-# React + TypeScript + Vite
+# 🚔 Template Landing Page – GCM Style
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern institutional landing page built with React, TypeScript, Vite, and TailwindCSS, inspired by public security interfaces (GCM).
 
-Currently, two official plugins are available:
+This project was designed with a focus on clean architecture, scalability, and professional UI/UX standards.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* ⚡ Fast and modern setup with Vite
+* 🎯 Fully responsive design
+* 🎨 TailwindCSS for styling
+* 🧠 Clean architecture (components, layouts, pages)
+* 🔀 Routing with React Router
+* 📰 News page with featured highlight + list
+* 📊 Statistics section (institutional metrics)
+* 🎠 Carousel with image-based cards
+* 📞 Contact section with icons and alignment
+* ✨ Micro-interactions and hover effects
+* 🧭 Active navigation highlighting
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧱 Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* React
+* TypeScript
+* Vite
+* TailwindCSS
+* React Router
+* Lucide React (icons)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Live Demo
+
+👉 https://landing-page-template-nine-tau.vercel.app/
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├── components/
+ ├── layouts/
+ ├── pages/
+ ├── assets/
+ ├── styles/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 Architecture
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This project follows a scalable front-end architecture:
+
+* **Layouts** → structure (MainLayout)
+* **Pages** → route-based views
+* **Components** → reusable UI blocks
+
+---
+
+## 🔮 Future Improvements
+
+* 🔌 Backend integration (API for news)
+* 🔐 Authentication system (admin panel)
+* 📝 CMS for managing content
+* 🌐 Multi-language support
+
+---
+
+## 📦 Installation
+
+```bash
+npm install
+npm run dev
 ```
+
+---
+
+## 🏗 Build
+
+```bash
+npm run build
+```
+
+---
+
+## 📌 Deployment
+
+This project is deployed using Vercel.
+
+---
+
+## 💡 Purpose
+
+This project was created as a reusable template for:
+
+* Institutional websites
+* Government/public service interfaces
+* Freelance projects
+
+---
+
+## 👨‍💻 Author
+
+Developed by [Your Name]
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.

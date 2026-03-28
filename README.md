@@ -106,7 +106,7 @@ This project was created as a reusable template for:
 
 ## 👨‍💻 Author
 
-Developed by [Your Name]
+Developed by Kayo Thyerre
 
 ---
 
